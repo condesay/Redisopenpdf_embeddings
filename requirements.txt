@@ -9,3 +9,4 @@ numpy
 PyPDF2
 matplotlib
 plotly
+scipy
