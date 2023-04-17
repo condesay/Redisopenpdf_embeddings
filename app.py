@@ -17,9 +17,21 @@ from typing import List, Iterator
 
 # Ignore unclosed SSL socket warnings - optional in case you get these errors
 import warnings
-
 warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
+
+# Get OpenAI API key from user input
+st.write("Please enter your OpenAI API key:")
+openai_api_key = st.text_input(label="OpenAI API key")
+
+# Check if API key is provided and valid
+if openai_api_key:
+    try:
+        openai.api_key = openai_api_key
+        openai.Model.list()
+    except Exception as e:
+        st.write("Error: Invalid OpenAI API key. Please check your API key and try again.")
+        st.stop()
 
 pdf = PdfReader(open("partp34.pdf", "rb"))
 number_of_pages = len(pdf.pages)
