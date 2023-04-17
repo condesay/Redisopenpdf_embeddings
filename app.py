@@ -112,7 +112,7 @@ except:
     redis_client.ft(INDEX_NAME).create_index(
         fields = fields,
         definition = IndexDefinition(prefix=[PREFIX2], index_type=IndexType.HASH)
-    )
+    ) 
 
 def index_documents(client: redis.Redis, prefix: str, documents: pd.DataFrame):
     records = documents.to_dict("records")
