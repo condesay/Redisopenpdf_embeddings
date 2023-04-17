@@ -75,7 +75,7 @@ from redis.commands.search.field import (
     VectorField,
 )
 
-REDIS_HOST ="127.0.0.1"
+REDIS_HOST ="localhost"
 REDIS_PORT ="6379"
 REDIS_PASSWORD = "" # default for passwordless Redis
 
