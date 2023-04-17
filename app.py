@@ -88,7 +88,7 @@ redis_client = redis.Redis(
 # Constants
 VECTOR_DIM = len(df['embeddings'][0]) # length of the vectors
 VECTOR_NUMBER = len(df)                 # initial number of vectors
-INDEX_NAME = "embeddings-index2"                 # name of the search index
+INDEX_NAME = "embeddings-indexv"                 # name of the search index
 PREFIX2 = "doc2"                                  # prefix for the document keys
 DISTANCE_METRIC = "COSINE"                      # distance metric for the vectors (ex. COSINE, IP, L2)
 
@@ -134,7 +134,7 @@ print(f"Loaded {redis_client.info()['db0']['keys']} documents in Redis search in
 def search_redis(
     redis_client: redis.Redis,
     user_query: str,
-    index_name: str = "embeddings-index2",
+    index_name: str = "embeddings-indexv",
     vector_field: str = "embeddings",
     return_fields: list = ["text", "vector_score"],
     hybrid_fields = "*",
