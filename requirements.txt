@@ -3,7 +3,6 @@ openai==0.26.5
 streamlit==1.18.0
 python-dotenv==0.21.0
 transformers
-tenacity
 pandas
 numpy 
 PyPDF2
