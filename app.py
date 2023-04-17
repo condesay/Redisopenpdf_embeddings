@@ -1,4 +1,3 @@
-from PyPDF2 import PdfReader
 import pandas as pd
 import os
 import openai
