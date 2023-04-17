@@ -11,3 +11,4 @@ matplotlib
 plotly
 scipy
 sklearn
+scikit-learn==1.2.2
