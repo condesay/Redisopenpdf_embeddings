@@ -8,3 +8,4 @@ pandas
 numpy 
 PyPDF2
 matplotlib
+plotly
