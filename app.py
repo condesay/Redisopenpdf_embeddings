@@ -75,7 +75,7 @@ from redis.commands.search.field import (
     VectorField,
 )
 
-REDIS_HOST ="localhost"
+REDIS_HOST ="127.0.0.1"
 REDIS_PORT ="6379"
 REDIS_PASSWORD = "" # default for passwordless Redis
 
@@ -85,8 +85,6 @@ redis_client = redis.Redis(
     port=REDIS_PORT,
     password=REDIS_PASSWORD
 )
-
-
 # Constants
 VECTOR_DIM = len(df['embeddings'][0]) # length of the vectors
 VECTOR_NUMBER = len(df)                 # initial number of vectors
