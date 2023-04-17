@@ -7,3 +7,4 @@ tenacity
 pandas
 numpy 
 PyPDF2
+matplotlib.pyplot
