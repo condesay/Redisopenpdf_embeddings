@@ -1,18 +1,14 @@
 import pandas as pd
 import streamlit as st
-import os
 import openai
 from io import BytesIO
 from PyPDF2 import PdfReader
-import pandas as pdpd
 from openai.embeddings_utils import get_embedding, cosine_similarity
 import openai
 import os
-import requests
 import redis
-from ast import literal_eval
 import numpy as np
-from typing import List, Iterator
+from typing import List
 
 
 # Ignore unclosed SSL socket warnings - optional in case you get these errors
@@ -56,7 +52,6 @@ df = paper_df(pdf_text)
 print(df)
 
 def calculate_embeddings(df):
-    openai.api_key = os.getenv("OPENAI_API_KEY","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")
     embedding_model = "text-embedding-ada-002"
     embeddings = df.text.apply([lambda x: get_embedding(x, engine=embedding_model)])
     df["embeddings"] = embeddings
