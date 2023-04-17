@@ -6,3 +6,4 @@ transformers
 tenacity
 pandas
 numpy 
+PdfReader
